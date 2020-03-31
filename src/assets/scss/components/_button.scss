@@ -1,0 +1,23 @@
+.Button {
+    appearance: none;
+    padding: 6px 20px;
+    border-radius: 12px;
+    border: none;
+    transition: background-color .2s ease-in-out;
+
+    &--Primary {
+        background-color: #3295f3;
+        color: #ffffff;
+        
+        &:hover {
+            background-color: #53acff;
+        }
+    }
+    
+    &--Secondary {
+        &:hover {
+            background-color: #dfdfdf;
+        }
+    }
+
+}

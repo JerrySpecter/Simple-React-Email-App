@@ -1,0 +1,72 @@
+.Email-List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-Wrapper {
+        min-width: 320px;
+        width: 350px;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
+    }
+
+    &-Notice {
+        padding: 12px;
+    }
+
+    &-Item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 12px;
+        border-left: 6px solid transparent;
+        border-bottom: 1px solid #d7d7d7;
+        transition: {
+            property: border-left-color, background-color;
+            duration: .2s;
+            timing-function: ease-in-out;
+        }
+
+        &--notRead {
+            border-left-color: #1f97ed;
+        }
+
+        &--active {
+            background-color: #e7e7e7;
+        }
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        .Image {
+            margin-right: 12px;
+            width: 60px;
+            border-radius: 4px;
+        }
+
+        .Name {
+            margin-top: 0;
+            margin-bottom: 0px;
+            color: #a0a0a0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .Title {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .Excerpt {
+            margin: 0;
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+}

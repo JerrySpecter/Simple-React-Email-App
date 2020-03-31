@@ -1,0 +1,95 @@
+.Sidebar {
+    height: 100vh;
+    min-width: 160px;
+    width: 160px;
+    background-color: #242a3a;
+    padding-top: 40px;
+    
+    .Button {
+        margin-left: 24px;
+        margin-bottom: 20px;
+    }
+
+    &-List {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-Item {
+            padding: 12px 24px;
+            color: #ffffff;
+            font-weight: 700;
+            transition: background-color .2s ease-in-out;
+            cursor: pointer;
+
+            &--active {
+                background-color: #455173;
+            }
+
+            &:hover {
+                background-color: #323a52;
+            }
+
+            span {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &-Title {
+        color: #ffffff;
+        opacity: 0.5;
+        padding: 0 12px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Mobile-Navigation {
+        position: relative;
+
+        &-Button {
+            position: absolute;
+            top: 12px;
+            right: 30px;
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .Mailbox-Name {
+            font-size: 16px;
+            position: absolute;
+            top: 13px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .Mobile-Header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 50px;
+            background-color: #242a3a;
+            color: #ffffff;
+        }
+    
+        .Sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform .2s ease-in-out;
+            z-index: 3;
+
+            &.is-open {
+                transform: translateX(0);
+            }
+        }
+    }
+}
