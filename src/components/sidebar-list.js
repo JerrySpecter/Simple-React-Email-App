@@ -10,7 +10,11 @@ export const SidebarList = (props) => {
             {list.map((item, i) => {
                 return (
                     <li 
-                        className={`Sidebar-List-Item ${item.active ? 'Sidebar-List-Item--active' : ''}`} 
+                        className={`
+                            Sidebar-List-Item ${item.active ? 'Sidebar-List-Item--active' : ''}
+                            Sidebar-List-Item ${item.label ? 'Sidebar-List-Item--label' : ''}
+                            Sidebar-List-Item ${item.label ? `Sidebar-List-Item--${item.name}` : ''}
+                        `} 
                         onClick={() => {
                             if (setActiveMailbox) setActiveMailbox(i)
                             setMenuOpen(false)

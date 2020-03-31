@@ -123,27 +123,27 @@ export const data = {
     ],
     mailboxes: [
         {
-            name: 'inbox',
+            name: 'Inbox',
             active: true,
             emails: [0, 4, 5, 6, 9, 10, 11]
         },
         {
-            name: 'important',
+            name: 'Important',
             active: false,
             emails: [3, 4, 6]
         },
         {
-            name: 'sent',
+            name: 'Sent',
             active: false,
             emails: []
         },
         {
-            name: 'drafts',
+            name: 'Drafts',
             active: false,
             emails: []
         },
         {
-            name: 'trash',
+            name: 'Trash',
             active: false,
             emails: [7, 8]
         },
@@ -151,17 +151,17 @@ export const data = {
     labels: [
         {
             name: 'Personal',
-            color: '#f0ff0f',
+            label: true,
             emails: []
         },
         {
             name: 'Work',
-            color: '#ff0ff0',
+            label: true,
             emails: []
         },
         {
             name: 'Travel',
-            color: '#0ff0ff',
+            label: true,
             emails: []
         },
     ]

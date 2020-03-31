@@ -26,6 +26,39 @@
                 background-color: #455173;
             }
 
+            &--label {
+                position: relative;
+                padding-left: 46px;
+
+                &::before {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 3px;
+                    position: absolute;
+                    top: 50%;
+                    left: 24px;
+                    transform: translateY(-50%);
+                    background-color: white;
+                }
+            }
+
+            &--Personal {
+                &::before {
+                    background-color: #ffce55;
+                }
+            }
+            &--Work {
+                &::before {
+                    background-color: #40d0b5;
+                }
+            }
+            &--Travel {
+                &::before {
+                    background-color: #43c366;
+                }
+            }
+
             &:hover {
                 background-color: #323a52;
             }
@@ -44,6 +77,10 @@
         font-size: 20px;
         font-weight: 400;
     }
+}
+
+.Mobile-Header {
+    display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -70,6 +107,7 @@
         }
 
         .Mobile-Header {
+            display: block;
             position: fixed;
             top: 0;
             left: 0;
